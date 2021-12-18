@@ -6,6 +6,9 @@ import { UserConfig } from 'vite';
 import ViteComponents from 'vite-plugin-components';
 import { viteMockServe } from 'vite-plugin-mock';
 import viteCompression from 'vite-plugin-compression';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 const resolve = (dir: string) => join(__dirname, dir);
 // doc#https://vitejs.dev/config/#config-file
@@ -49,6 +52,12 @@ const config: UserConfig = {
       mockPath: 'src/mock',
       watchFiles: true,
       localEnabled: process.env.NODE_ENV === 'development',
+    }),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
     }),
   ],
   server: {
