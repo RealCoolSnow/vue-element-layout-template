@@ -2,5 +2,19 @@
   "app_name": "vue-element-layout-template",
   "login": "登录",
   "username_tip": "请输入用户名",
-  "password_tip": "请输入密码"
+  "password_tip": "请输入密码",
+  "header_tip": "这里是header",
+  "menu_1": {
+    "title": "菜单-1",
+    "item_1": "子菜单-1",
+    "item_2": {
+      "title": "三级菜单",
+      "item_1": "子菜单"
+    }
+  },
+  "menu_2": {
+    "title": "菜单-2",
+    "item_1": "子菜单-1",
+    "item_2": "子菜单-2"
+  }
 }
