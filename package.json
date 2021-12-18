@@ -1,0 +1,55 @@
+{
+  "name": "vue-element-layout-template",
+  "description": "Common layout template with Vue3 & ElementUI & TypeScript. ",
+  "version": "1.0.0",
+  "private": true,
+  "author": "CoolSnow(coolsnow2020@gmail.com)",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development vite --port 3001 --open",
+    "build": "cross-env NODE_ENV=production vite build",
+    "build-dev": "cross-env NODE_ENV=production vite build --mode devserver",
+    "test": "cross-env NODE_ENV=development jest -i",
+    "scan": "f2elint scan",
+    "fix": "f2elint fix"
+  },
+  "dependencies": {
+    "@vueuse/core": "^5.0.3",
+    "axios": "^0.21.1",
+    "vue": "^3.2.6",
+    "vue-i18n": "^9.0.0",
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@vitejs/plugin-vue": "^1.6.0",
+    "@vue/compiler-sfc": "^3.1.2",
+    "@vuedx/typescript-plugin-vue": "^0.7.4",
+    "autoprefixer": "latest",
+    "cross-env": "^7.0.3",
+    "f2elint": "^1.2.0",
+    "jest": "^27.0.6",
+    "mockjs": "^1.1.0",
+    "pnpm": "^5.18.7",
+    "postcss": "latest",
+    "tailwindcss": "^3.0.0",
+    "ts-jest": "^27.0.3",
+    "typescript": "4.0.8",
+    "vite": "^2.5.1",
+    "vite-plugin-components": "^0.11.4",
+    "vite-plugin-compression": "^0.3.5",
+    "vite-plugin-mock": "^2.8.0",
+    "vite-plugin-pages": "^0.19.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "f2elint commit-file-scan",
+      "commit-msg": "f2elint commit-msg-scan"
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
+}

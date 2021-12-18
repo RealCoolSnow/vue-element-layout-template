@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "esbenp.prettier-vscode",
+    "octref.vetur",
+    "lokalise.i18n-ally",
+    "bradlc.vscode-tailwindcss",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "mrmlnc.vscode-autoprefixer"
+  ]
+}
