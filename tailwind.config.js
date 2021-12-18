@@ -6,6 +6,9 @@ module.exports = {
       opacity: {
         10: '0.1',
       },
+      colors: {
+        primary: '#1296db',
+      },
     },
   },
   plugins: [],

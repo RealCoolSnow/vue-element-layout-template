@@ -1,6 +1,6 @@
 {
   "app_name": "vue-element-layout-template",
-  "home": "首页",
-  "about": "关于",
-  "about_msg": "这是关于页面"
+  "login": "登录",
+  "username_tip": "请输入用户名",
+  "password_tip": "请输入密码"
 }
