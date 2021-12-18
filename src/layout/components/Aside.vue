@@ -14,7 +14,7 @@
       <template v-if="item.child">
         <el-sub-menu :index="item.path" :key="item.path">
           <template #title>
-            <i :class="item.icon"></i>
+            <i :class="`iconfont ${item.icon}`"></i>
             <span>{{ item.title }}</span>
           </template>
           <template v-for="subItem in item.child">
@@ -36,7 +36,7 @@
       </template>
       <template v-else>
         <el-menu-item :index="item.path" :key="item.path">
-          <i :class="item.icon"></i>
+          <i :class="`iconfont ${item.icon}`"></i>
           <template #title>{{ item.title }}</template>
         </el-menu-item>
       </template>
@@ -44,7 +44,9 @@
   </el-menu>
 </template>
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
+import store from '@/store';
+import { GetterTypes } from '@/store/types';
+import { computed, defineComponent, reactive } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 import { getMenuList } from '../aside-menu';
@@ -54,7 +56,7 @@ export default defineComponent({
     const { t } = useI18n();
     const route = useRoute();
     const state = reactive({
-      collapse: false,
+      collapse: computed(() => store.getters[GetterTypes.APP.COLLAPSE]),
     });
     const menuList = getMenuList(t);
     const onMenuSelected = (key: string, keyPath: string) => {

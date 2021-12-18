@@ -52,6 +52,19 @@ const mainRoutes = [
       },
     ],
   },
+  // 菜单-3
+  {
+    path: '/',
+    name: 'menu-3',
+    component: Layout,
+    children: [
+      {
+        path: '/menu-3',
+        name: 'menu-3',
+        component: () => import('@/pages/menu-3/index.vue'),
+      },
+    ],
+  },
 ];
 const base = import.meta.env.VITE_ROUTER?.toString() || '';
 

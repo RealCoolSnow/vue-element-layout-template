@@ -13,7 +13,7 @@ const getMenuList = (t: T): MenuItem[] => {
     {
       title: t('menu_1.title'),
       path: '/',
-      icon: 'el-icon-lx-home',
+      icon: 'icon-menu',
       child: [
         {
           title: t('menu_1.item_1'),
@@ -35,6 +35,7 @@ const getMenuList = (t: T): MenuItem[] => {
     {
       title: t('menu_2.title'),
       path: '/menu-2',
+      icon: 'icon-menu',
       child: [
         {
           title: t('menu_2.item_1'),
@@ -45,6 +46,12 @@ const getMenuList = (t: T): MenuItem[] => {
           path: '/menu-2/item-2',
         },
       ],
+    },
+    // 菜单3
+    {
+      title: t('menu_3.title'),
+      path: '/menu-3',
+      icon: 'icon-menu',
     },
   ];
   return list;
