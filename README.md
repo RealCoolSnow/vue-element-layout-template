@@ -1,45 +1,20 @@
 <p align='center'>
-⚡️Quick start project with Vue3 & Vite & TypeScript.<br/>
-（本分支接入阿里巴巴前端规约：https://github.com/alibaba/f2e-spec）
+⚡️使用Vue3 & ElementUI & TypeScript构建的后台管理快速开发模版.<br/>
+内置i18n国际化、store、TailwindCSS、axios框架。
 </p>
-
-## Features
-
-- Vue3, [Vite](https://github.com/vitejs/vite), ESlint - born with fastness
-
-- [File based routing](https://github.com/hannoeru/vite-plugin-pages)
-
-- i18n, store, axios, [mock](https://github.com/anncwb/vite-plugin-mock) - works out-of-box
-
-- [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) - CSS framework for rapid UI development
-
-- TypeScript
-
-- [Composition api](https://composition-api.vuejs.org/)
-
-## Plugins
-
-- [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) - File system-based routing plugin
-
-- [vite-plugin-components](https://github.com/antfu/vite-plugin-components) - On-demand components auto-importing
-
-- [vite-plugin-mock](https://github.com/anncwb/vite-plugin-mock) - A mock plugin for vite.use mockjs and koa
-
-- [tailwindcss](https://github.com/tailwindlabs/tailwindcss) - A utility-first CSS framework for rapid UI development
-
-- [vueuse](https://github.com/antfu/vueuse) - Collection of Composition API utils
-
-- [vuex 4.0](https://github.com/vuejs/vuex/tree/4.0)
-
-- [axios](https://github.com/axios/axios)
-
-- [vue-i18n](https://github.com/kazupon/vue-i18n)
 
 ## Usage
 
 1. Clone this repository
-2. npm install
-3. npm run dev
+2. yarn install
+3. yarn run dev
+
+# Screenshot
+
+<p align="center">
+  <img src="screenshot/1.png" width="100%" />
+  <img src="screenshot/2.png" width="100%" />
+</p>
 
 # Author
 
