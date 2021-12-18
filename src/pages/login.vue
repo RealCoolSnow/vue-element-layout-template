@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col items-center w-full h-full pt-48">
+  <div class="flex flex-col items-center w-full h-full pt-48 bg-gray-50">
     <div class="text-lg text-primary">{{ t('login_title') }}</div>
-    <div class="flex flex-col bg-gray-100 bg-opacity-70 rounded w-1/4 p-8 mt-8">
+    <div class="flex flex-col bg-gray-200 bg-opacity-70 rounded w-1/4 p-8 mt-8">
       <el-input
         v-model="state.username"
         :placeholder="t('username_tip')"
