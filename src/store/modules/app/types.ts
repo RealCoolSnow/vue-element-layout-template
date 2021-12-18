@@ -3,6 +3,7 @@ export enum MutationTypes_APP {
   SET_COUNTER = 'app/set-counter',
   SET_LANGUAGE = 'app/set-language',
   SET_COLLAPSE = 'app/set-collapse',
+  SET_USERNAME = 'app/set-username',
 }
 
 // action
@@ -15,4 +16,5 @@ export enum GetterTypes_APP {
   COUNTER = 'app/counter',
   LANGUAGE = 'app/language',
   COLLAPSE = 'app/collapse',
+  USERNAME = 'app/username',
 }

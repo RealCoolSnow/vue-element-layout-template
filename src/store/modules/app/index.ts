@@ -7,6 +7,7 @@ const app = {
     counter: 0,
     language: sessionStorage.getItem('language') || 'zh-CN',
     collapse: false,
+    username: '',
   },
   mutations: {
     [MutationTypes_APP.SET_LANGUAGE]: (state: any, language: string) => {
@@ -18,6 +19,9 @@ const app = {
     },
     [MutationTypes_APP.SET_COLLAPSE]: (state: any, collapse: boolean) => {
       state.collapse = collapse;
+    },
+    [MutationTypes_APP.SET_USERNAME]: (state: any, username: string) => {
+      state.username = username;
     },
   },
   actions: {
@@ -34,6 +38,9 @@ const app = {
     },
     [GetterTypes_APP.COLLAPSE](state: any): string {
       return state.collapse;
+    },
+    [GetterTypes_APP.USERNAME](state: any): string {
+      return state.username;
     },
   },
 };

@@ -1,6 +1,7 @@
 {
   "app_name": "vue-element-layout-template",
   "login": "登录",
+  "login_title": "用户登录",
   "username_tip": "请输入用户名",
   "password_tip": "请输入密码",
   "header_tip": "这里是header",

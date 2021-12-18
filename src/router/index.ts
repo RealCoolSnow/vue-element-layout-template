@@ -1,6 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Layout from '@/layout/index.vue';
+import store from '@/store';
+import { GetterTypes } from '@/store/types';
 
 const baseRoutes: RouteRecordRaw[] = [
   {
@@ -80,7 +82,11 @@ router.beforeEach((to, from, next) => {
   if (to.matched.length === 0) {
     next('/404');
   } else {
-    next();
+    const toLogin =
+      to.path !== '/login' && store.getters[GetterTypes.APP.USERNAME].trim().length <= 0;
+    if (toLogin) {
+      next('/login');
+    } else next();
   }
 });
 
