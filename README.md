@@ -1,5 +1,5 @@
 <p align='center'>
-⚡️使用Vue3 & ElementUI & TypeScript构建的后台管理快速开发模版.<br/>
+⚡️使用Vue3 & ElementUI & TypeScript构建的后台管理快速开发模版<br/>
 内置i18n国际化、store、TailwindCSS、axios框架。
 </p>
 
