@@ -1,8 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import Layout from '@/layout/index.vue';
-import store from '@/store';
-import { GetterTypes } from '@/store/types';
+import type { RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
+import Layout from '@/layout/index.vue'
+import store from '@/store'
+import { GetterTypes } from '@/store/types'
 
 const baseRoutes: RouteRecordRaw[] = [
   {
@@ -15,7 +15,7 @@ const baseRoutes: RouteRecordRaw[] = [
     name: 'login',
     component: () => import('@/pages/login.vue'),
   },
-];
+]
 
 const mainRoutes = [
   // 菜单-1
@@ -67,27 +67,29 @@ const mainRoutes = [
       },
     ],
   },
-];
-const base = import.meta.env.VITE_ROUTER?.toString() || '';
+]
+const base = import.meta.env.VITE_ROUTER?.toString() || ''
 
-const routes = [...baseRoutes, ...mainRoutes];
+const routes = [...baseRoutes, ...mainRoutes]
 
-console.log(routes);
+// console.log(routes)
 const router = createRouter({
   history: createWebHistory(base),
   routes,
-});
+})
 
 router.beforeEach((to, from, next) => {
   if (to.matched.length === 0) {
-    next('/404');
-  } else {
-    const toLogin =
-      to.path !== '/login' && store.getters[GetterTypes.APP.USERNAME].trim().length <= 0;
-    if (toLogin) {
-      next('/login');
-    } else next();
+    next('/404')
   }
-});
+  else {
+    const toLogin
+      = to.path !== '/login' && store.getters[GetterTypes.APP.USERNAME].trim().length <= 0
+    if (toLogin)
+      next('/login')
 
-export default router;
+    else next()
+  }
+})
+
+export default router

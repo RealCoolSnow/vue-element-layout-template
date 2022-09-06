@@ -1,10 +1,10 @@
-type T = (key: string | number) => string;
+type T = (key: string | number) => string
 
 interface MenuItem {
-  title: string;
-  path: string;
-  icon?: string;
-  child?: MenuItem[];
+  title: string
+  path: string
+  icon?: string
+  child?: MenuItem[]
 }
 
 const getMenuList = (t: T): MenuItem[] => {
@@ -53,8 +53,8 @@ const getMenuList = (t: T): MenuItem[] => {
       path: '/menu-3',
       icon: 'icon-menu',
     },
-  ];
-  return list;
-};
+  ]
+  return list
+}
 
-export { getMenuList, MenuItem };
+export { getMenuList, MenuItem }

@@ -20,13 +20,13 @@ const config: UserConfig = {
   },
   build: {
     target: 'es2015',
-    terserOptions: {
-      compress: {
-        drop_console: true, // 所有console
-        // pure_funcs: ['console.log'], // 单独指定
-        drop_debugger: true,
-      },
-    },
+    // terserOptions: {
+    //   compress: {
+    //     drop_console: true, // 所有console
+    //     // pure_funcs: ['console.log'], // 单独指定
+    //     drop_debugger: true,
+    //   },
+    // },
     /* 如需分包时开启 */
     /*
     rollupOptions: {

@@ -1,6 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Commit } from 'vuex';
-import { MutationTypes_APP, ActionTypes_APP, GetterTypes_APP } from './types';
+import type { Commit } from 'vuex'
+import { ActionTypes_APP, GetterTypes_APP, MutationTypes_APP } from './types'
 
 const app = {
   state: {
@@ -11,38 +10,38 @@ const app = {
   },
   mutations: {
     [MutationTypes_APP.SET_LANGUAGE]: (state: any, language: string) => {
-      state.language = language;
-      sessionStorage.setItem('language', language);
+      state.language = language
+      sessionStorage.setItem('language', language)
     },
     [MutationTypes_APP.SET_COUNTER]: (state: any, n: number) => {
-      state.counter += n;
+      state.counter += n
     },
     [MutationTypes_APP.SET_COLLAPSE]: (state: any, collapse: boolean) => {
-      state.collapse = collapse;
+      state.collapse = collapse
     },
     [MutationTypes_APP.SET_USERNAME]: (state: any, username: string) => {
-      state.username = username;
+      state.username = username
     },
   },
   actions: {
     [ActionTypes_APP.SET_LANGUAGE](context: { commit: Commit }, language: string) {
-      context.commit(ActionTypes_APP.SET_LANGUAGE, language);
+      context.commit(ActionTypes_APP.SET_LANGUAGE, language)
     },
   },
   getters: {
     [GetterTypes_APP.COUNTER](state: any): number {
-      return state.counter;
+      return state.counter
     },
     [GetterTypes_APP.LANGUAGE](state: any): string {
-      return state.language;
+      return state.language
     },
     [GetterTypes_APP.COLLAPSE](state: any): string {
-      return state.collapse;
+      return state.collapse
     },
     [GetterTypes_APP.USERNAME](state: any): string {
-      return state.username;
+      return state.username
     },
   },
-};
+}
 
-export default app;
+export default app

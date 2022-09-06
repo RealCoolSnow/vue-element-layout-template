@@ -1,3 +1,22 @@
+<script lang="ts">
+import { computed, defineComponent } from 'vue'
+import Header from './components/Header.vue'
+import Aside from './components/Aside.vue'
+import store from '@/store'
+import { GetterTypes } from '@/store/types'
+
+export default defineComponent({
+  components: {
+    Header,
+    Aside,
+  },
+  setup() {
+    const collapse = computed(() => store.getters[GetterTypes.APP.COLLAPSE])
+    return { collapse }
+  },
+})
+</script>
+
 <template>
   <el-container>
     <el-header><Header /></el-header>
@@ -17,24 +36,7 @@
     </el-container>
   </el-container>
 </template>
-<script lang="ts">
-import { computed, defineComponent } from 'vue';
-import Header from './components/Header.vue';
-import Aside from './components/Aside.vue';
-import store from '@/store';
-import { GetterTypes } from '@/store/types';
 
-export default defineComponent({
-  components: {
-    Header,
-    Aside,
-  },
-  setup() {
-    const collapse = computed(() => store.getters[GetterTypes.APP.COLLAPSE]);
-    return { collapse };
-  },
-});
-</script>
 <style scoped>
 .el-header {
   padding: 0;
