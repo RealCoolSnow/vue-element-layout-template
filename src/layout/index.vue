@@ -1,20 +1,11 @@
-<script lang="ts">
+<script setup lang="ts">
 import { computed, defineComponent } from 'vue'
 import Header from './components/Header.vue'
 import Aside from './components/Aside.vue'
 import store from '@/store'
-import { GetterTypes } from '@/store/types'
+import { GetterTypes } from '@/store/types.d'
 
-export default defineComponent({
-  components: {
-    Header,
-    Aside,
-  },
-  setup() {
-    const collapse = computed(() => store.getters[GetterTypes.APP.COLLAPSE])
-    return { collapse }
-  },
-})
+const collapse = computed(() => store.getters[GetterTypes.APP.COLLAPSE])
 </script>
 
 <template>
@@ -48,15 +39,15 @@ export default defineComponent({
   padding: 0;
 }
 .el-aside {
-  width: 250px;
+  width: 160px;
 }
 .content-box {
   position: absolute;
-  left: 250px;
+  left: 160px;
   right: 0;
   top: 80px;
   bottom: 0;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   -webkit-transition: left 0.3s ease-in-out;
   transition: left 0.3s ease-in-out;
   background: #fefefe;

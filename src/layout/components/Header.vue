@@ -1,19 +1,14 @@
-<script lang="ts">
+<script setup lang="ts">
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import store from '@/store'
-import { GetterTypes, MutationTypes } from '@/store/types'
+import { GetterTypes, MutationTypes } from '@/store/types.d'
 
-export default defineComponent({
-  setup() {
-    const { t } = useI18n()
-    const collapse = computed(() => store.getters[GetterTypes.APP.COLLAPSE])
-    const collapseChange = () => {
-      store.commit(MutationTypes.APP.SET_COLLAPSE, !collapse.value)
-    }
-    return { t, collapse, collapseChange }
-  },
-})
+const { t } = useI18n()
+const collapse = computed(() => store.getters[GetterTypes.APP.COLLAPSE])
+const collapseChange = () => {
+  store.commit(MutationTypes.APP.SET_COLLAPSE, !collapse.value)
+}
 </script>
 
 <template>

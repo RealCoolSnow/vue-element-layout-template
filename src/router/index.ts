@@ -2,7 +2,7 @@ import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHistory } from 'vue-router'
 import Layout from '@/layout/index.vue'
 import store from '@/store'
-import { GetterTypes } from '@/store/types'
+import { GetterTypes } from '@/store/types.d'
 
 const baseRoutes: RouteRecordRaw[] = [
   {

@@ -1,25 +1,20 @@
-<script lang="ts">
-import { computed, defineComponent, reactive } from 'vue'
+<script setup lang="ts">
+import { computed, reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 import { getMenuList } from '../aside-menu'
-import { GetterTypes } from '@/store/types'
+import { GetterTypes } from '@/store/types.d'
 import store from '@/store'
 
-export default defineComponent({
-  setup() {
-    const { t } = useI18n()
-    const route = useRoute()
-    const state = reactive({
-      collapse: computed(() => store.getters[GetterTypes.APP.COLLAPSE]),
-    })
-    const menuList = getMenuList(t)
-    const onMenuSelected = (key: string, keyPath: string) => {
-      console.log('onMenuSelected', key, keyPath)
-    }
-    return { state, menuList, onMenuSelected, route }
-  },
+const { t } = useI18n()
+const route = useRoute()
+const state = reactive({
+  collapse: computed(() => store.getters[GetterTypes.APP.COLLAPSE]),
 })
+const menuList = getMenuList(t)
+const onMenuSelected = (key: string, keyPath: string) => {
+  console.log('onMenuSelected', key, keyPath)
+}
 </script>
 
 <template>
