@@ -12,7 +12,7 @@ const state = reactive({
   collapse: computed(() => store.getters[GetterTypes.APP.COLLAPSE]),
 })
 const menuList = getMenuList(t)
-const onMenuSelected = (key: string, keyPath: string) => {
+function onMenuSelected(key: string, keyPath: string) {
   console.log('onMenuSelected', key, keyPath)
 }
 </script>

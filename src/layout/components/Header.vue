@@ -6,7 +6,7 @@ import { GetterTypes, MutationTypes } from '@/store/types.d'
 
 const { t } = useI18n()
 const collapse = computed(() => store.getters[GetterTypes.APP.COLLAPSE])
-const collapseChange = () => {
+function collapseChange() {
   store.commit(MutationTypes.APP.SET_COLLAPSE, !collapse.value)
 }
 </script>

@@ -12,7 +12,7 @@ const state = reactive({
   username: 'admin',
   password: '123456',
 })
-const onLogin = () => {
+function onLogin() {
   store.commit(MutationTypes.APP.SET_USERNAME, state.username)
   router.replace('/')
 }
